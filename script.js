@@ -7,12 +7,12 @@ const openai = new OpenAIApi(new Configuration({
   apiKey: process.env.API_KEY
 }))
 
-// openai.createChatCompletion({
-//   model: "gpt-3.5-turbo",
-//   messages: [{role: "user", content: "hello, chatGPT!"}]
-// }).then(res => {
-//   console.log(res.data.choices[0].message.content)
-// })
+openai.createChatCompletion({
+  model: "gpt-3.5-turbo",
+  messages: [{role: "user", content: "hello, chatGPT!"}]
+}).then(res => {
+  console.log(res.data.choices[0].message.content)
+})
 
 const userInterface = readline.createInterface({
   input: process.stdin,
